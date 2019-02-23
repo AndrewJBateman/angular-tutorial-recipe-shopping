@@ -1,5 +1,4 @@
 import * as AuthActions from './auth.actions'
-import { Action } from 'rxjs/internal/scheduler/Action';
 
 export interface State {
 	token: string;
@@ -24,7 +23,12 @@ export function authReducer(state = initialState, action: AuthActions.AuthAction
 				...state,
 				token: null,
 				authenticated: false
-			}
+			};
+		case (AuthActions.SET_TOKEN):
+      return {
+        ...state,
+        token: action.payload
+      };
 		default:
 			return state;
 	}
