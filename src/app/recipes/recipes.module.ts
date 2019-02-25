@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import { RecipesComponent } from './recipes.component';
 import { RecipeStartComponent } from './recipe-start/recipe-start.component';
@@ -10,6 +12,8 @@ import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipesRoutingModule } from './recipes-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { recipeReducer } from './store/recipe.reducers';
+import { RecipeEffects } from './store/recipe.effects';
 
 @NgModule({
 	declarations: [
@@ -24,7 +28,9 @@ import { SharedModule } from '../shared/shared.module';
 		CommonModule,
 		ReactiveFormsModule,
 		RecipesRoutingModule,
-		SharedModule
+		SharedModule,
+		StoreModule.forFeature('recipes', recipeReducer),
+		EffectsModule.forFeature([RecipeEffects])
 	]
 })
 export class RecipesModule {}
