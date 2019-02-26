@@ -7,11 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.0.0",
+    "@angular/animations": "^7.0.4",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "7.2.5",
     "@angular/core": "~7.0.0",
