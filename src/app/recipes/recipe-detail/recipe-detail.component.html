@@ -1,3 +1,4 @@
+<!-- Display recipe image -->
 <div class="row">
   <div class="col-xs-12">
     <img
@@ -7,11 +8,14 @@
       style="max-height: 300px;">
   </div>
 </div>
+
+<!-- display recipe name as heading -->
 <div class="row">
   <div class="col-xs-12">
     <h1>{{ (recipeState | async).recipes[id].name }}</h1>
   </div>
 </div>
+<!-- dropdown button menu with 3 options listed -->
 <div class="row">
   <div class="col-xs-12">
     <div
@@ -30,6 +34,7 @@
     </div>
   </div>
 </div>
+<!--  display recipe description and list of ingredients - name and amount -->
 <div class="row">
   <div class="col-xs-12">
     {{ (recipeState | async).recipes[id].description }}

@@ -1,6 +1,6 @@
 # Angular Tutorial Recipe Shopping
 
-An Angular 7 project from [Maximilian Schwarzmüller's Angular 7 course](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/overview) on Udemy.
+An Angular 7 project to display a list of recipes and to store the data in a google Firestore database with full Create, Read, Update and Delete functionality from the UI.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -17,7 +17,7 @@ An Angular 7 project from [Maximilian Schwarzmüller's Angular 7 course](https:/
 
 ## General info
 
-The course project is a recipe/shopping list app and it takes input from the following sections o the course:
+The course project is a recipe/shopping list app and it takes input from the following sections of the course:
 
 * Section 6: Components and data-binding: *ngIf, *ngFor
 
@@ -35,13 +35,19 @@ The course project is a recipe/shopping list app and it takes input from the fol
 
 ## Screenshots
 
-![Example screenshot](./img/.png)
+![Example screenshot](./img/recipe-list-detail.png).
+
+![Example screenshot](./img/firebase-data-storage.png).
 
 ## Technologies
 
 * [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6
+
 * [Angular Material](https://material.angular.io/)
+
 * [RxJS Library](https://angular.io/guide/rx-library) version 6.3.3
+
+* [Firebase](https://console.firebase.google.com/?hl=es-419) database storage-
 
 ## Setup
 
@@ -55,15 +61,77 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Code Examples
 
+* _Recipe detail template._
+
+```html
+<!-- Display recipe image -->
+<div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="(recipeState | async).recipes[id].imagePath"
+      alt="{{ (recipeState | async).recipes[id].name }}"
+      class="img-responsive"
+      style="max-height: 300px;">
+  </div>
+</div>
+
+<!-- display recipe name as heading -->
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ (recipeState | async).recipes[id].name }}</h1>
+  </div>
+</div>
+
+<!-- dropdown button menu with 3 options listed -->
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Recipe <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a></li>
+        <li><a style="cursor: pointer;" (click)="onEditRecipe()">Edit Recipe</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeleteRecipe()">Delete Recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--  display recipe description and list of ingredients - name and amount -->
+<div class="row">
+  <div class="col-xs-12">
+    {{ (recipeState | async).recipes[id].description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of (recipeState | async).recipes[id].ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
+</div>
+```
+
 ## Features
 
-* Iirebase database store of recipes and recipe details.
+* Possible to add recipes to a recipe list, with a description, list of ingredients and an image.
+
+* Firebase database store of recipes and recipe details.
 
 ## Status & To-Do List
 
-* Status: Requires testing and documentation updates.
+* Status: Registration/Login works with username and password stored in Firebase project user database.
 
-* To-Do: Test and correct code. Document code and improve README file.
+* To-Do: Complete testing. Document code and improve README file.
 
 ## Inspiration
 
