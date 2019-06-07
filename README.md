@@ -1,6 +1,6 @@
 # Angular Tutorial Recipe Shopping
 
-An Angular 7 project to display a list of recipes and to store the data in a google Firestore database with full Create, Read, Update and Delete functionality from the UI.
+An Angular 8 project to display a list of recipes and to store the data in a google Firestore database with full Create, Read, Update and Delete functionality from the UI.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -41,13 +41,13 @@ The course project is a recipe/shopping list app and it takes input from the fol
 
 ## Technologies
 
-* [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6
+* [Angular v8.0.0](https://angular.io/)
 
-* [Angular Material](https://material.angular.io/)
+* [Angular CLI v8.0.1](https://cli.angular.io/).
 
-* [RxJS Library](https://angular.io/guide/rx-library) version 6.3.3
+* [Firebase v6.1.1](https://firebase.google.com/)
 
-* [Firebase](https://console.firebase.google.com/?hl=es-419) database storage-
+* [Reactive Extensions for Javascript -RxJS v6.5.2](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 
 ## Setup
 
@@ -139,4 +139,4 @@ All code is from [Maximilian Schwarzmüller's Angular 7 course](https://www.udem
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
