@@ -1,10 +1,10 @@
-# Angular Tutorial Recipe Shopping
+# :zap: Angular Tutorial Recipe Shopping
 
-An Angular 8 project to display a list of recipes and to store the data in a google Firestore database with full Create, Read, Update and Delete functionality from the UI.
+* An Angular 8 project to display a list of recipes and to store the data in a google Firestore database with full Create, Read, Update and Delete functionality from the UI.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -15,51 +15,38 @@ An Angular 8 project to display a list of recipes and to store the data in a goo
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
-## General info
+## :books: General info
 
 The course project is a recipe/shopping list app and it takes input from the following sections of the course:
 
 * Section 6: Components and data-binding: *ngIf, *ngFor
-
 * Section 8: Directives: shared folder created, dropdown directive created.
-
 * Section 10: Services: recipe.services ile created. Using a Service for Cross-Component Communication. Using services for pushing data from A to B.
-
 * Section 12: Routing.
-
 * Section 14: Observables.
-
 * Section 16: Forms.
-
 * Section 19: Http.
 
-## Screenshots
+## :camera: Screenshots
 
 ![Example screenshot](./img/recipe-list-detail.png).
-
 ![Example screenshot](./img/firebase-data-storage.png).
 
-## Technologies
+## :signal_strength: Technologies
 
-* [Angular v8.0.0](https://angular.io/)
+* [Angular v8](https://angular.io/)
+* [Angular CLI v8](https://cli.angular.io/).
+* [Firebase v6](https://firebase.google.com/)
+* [Reactive Extensions for Javascript -RxJS v6](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 
-* [Angular CLI v8.0.1](https://cli.angular.io/).
+## :floppy_disk: Setup
 
-* [Firebase v6.1.1](https://firebase.google.com/)
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-* [Reactive Extensions for Javascript -RxJS v6.5.2](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
-
-## Setup
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Code Examples
+## :computer: Code Examples
 
 * _Recipe detail template._
 
@@ -121,22 +108,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 </div>
 ```
 
-## Features
+## :cool: Features
 
 * Possible to add recipes to a recipe list, with a description, list of ingredients and an image.
-
 * Firebase database store of recipes and recipe details.
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
 * Status: Registration/Login works with username and password stored in Firebase project user database.
-
 * To-Do: Complete testing. Document code and improve README file.
 
-## Inspiration
+## :clap: Inspiration
 
-All code is from [Maximilian Schwarzmüller's Angular 7 course](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/overview)
+* All code is from [Maximilian Schwarzmüller's Angular 7 course](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/overview)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
