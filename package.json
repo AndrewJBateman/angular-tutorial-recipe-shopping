@@ -33,12 +33,12 @@
     "firebase": "^6.1.1",
     "rxjs": "6.5.2",
     "rxjs-compat": "6.5.2",
-    "ts-loader": "^6.0.2",
-    "webpack-cli": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "webpack-cli": "^5.0.1",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.800.2",
+    "@angular-devkit/build-angular": "^15.0.4",
     "@angular/cli": "~8.0.2",
     "@angular/compiler-cli": "^8.0.0",
     "@angular/language-service": "~8.0.0",
